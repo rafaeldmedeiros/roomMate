@@ -1,0 +1,7 @@
+{
+  "name": "roomMate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
