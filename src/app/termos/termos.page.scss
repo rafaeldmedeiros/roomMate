@@ -1,0 +1,94 @@
+ion-icon{
+  font-size: 50px;
+}
+
+.fundo {
+  background: #9edfff;
+  min-height: 100%;
+}
+
+.fundo .center{
+  padding-top: 20px;
+  padding-bottom: 30px;
+  max-width: 20%;
+  max-height: 20%;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.left{
+padding-top: 50px;
+text-align: left;
+padding-left: 15px;
+
+}
+.right{
+padding-top: 50px;
+text-align: right;
+padding-right: 15px;
+}
+
+.center{
+  padding-top: 50px;
+  text-align: center;
+  }
+
+  .tituloPrincipal {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+table{
+  min-width: 100%;
+}
+
+.voltar {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  max-width: 20%;
+  max-height: 20%;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+.botaoPrincipal {
+  max-width: 70%;
+  max-height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.botaoSecundario {
+  max-width: 70%;
+  max-height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+
+.painel {
+  height: 17em;
+}
+
+.form {
+  padding-top: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+ion-grid {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+ion-card {
+  text-align: center;
+}

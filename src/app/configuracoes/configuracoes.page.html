@@ -1,0 +1,91 @@
+<ion-content>
+
+  <div class="fundo">
+    <table>
+      <tr>
+        <td class="left">
+
+            <ion-fab-button href="../inicial/" size="small" >
+              <ion-icon color="success" name="arrow-back" class="mais"></ion-icon>
+            </ion-fab-button>
+
+
+
+        </td>
+        <td class="right"><img src="..\assets\room.png" width="60" alt="logo"></td>
+      </tr>
+    </table>
+
+
+    <ion-menu contentId="main-content" class="menu">
+
+      <div class="botaoMenu">
+        <div class="tituloPrincipal">
+          <strong>MENU</strong>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../inicial/">
+            Tela Inicial
+            <ion-icon name="home-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../despesas/">
+            Despesas
+            <ion-icon name="file-tray-full-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../agenda/">
+            Agenda
+            <ion-icon name="calendar-number-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../enquetes/">
+            Enquetes
+            <ion-icon name="help-circle-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../regras/">
+            Regras da casa
+            <ion-icon name="alert-circle-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../moradores/">
+            Moradores
+            <ion-icon name="people-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../visitantes/">
+            Visitantes
+            <ion-icon name="person-add-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../configuracoes/">
+            Configurações
+            <ion-icon name="settings-sharp"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+
+
+    </ion-menu>
+    <div id="main-content">
+
+      <ion-toolbar color="success">
+        <ion-buttons slot="start">
+          <ion-menu-button color="dark"></ion-menu-button>
+        </ion-buttons>
+        <ion-label color="dark"><strong>CONFIGURAÇÕES</strong></ion-label>
+
+      </ion-toolbar>
+
+    </div>
+</div>
+</ion-content>

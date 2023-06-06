@@ -1,6 +1,63 @@
-#container {
-  text-align: center;
 
+
+.fundo {
+  background: linear-gradient(180deg, #38BDFF 0%, #FFFFFF 47.92%, #FFFFFF 63.54%, #30BB40 100%);
+  min-height: 100%;
+}
+
+.fundo a{
+  color: #FFFFFF;
+
+}
+
+a:link{
+  text-decoration: none;
+}
+
+.fundo img {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 70%;
+  max-height: 70%;
+}
+
+
+.painel {
+  height: 17em;
+}
+
+.botaoPrincipal {
+  max-width: 70%;
+  max-height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.botaoSecundario {
+  max-width: 70%;
+  max-height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.tituloPrincipal {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 90px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#container {
+
+  text-align: center;
   position: absolute;
   left: 0;
   right: 0;

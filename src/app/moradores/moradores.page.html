@@ -1,0 +1,172 @@
+<ion-content>
+
+  <div class="fundo">
+    <table>
+      <tr>
+        <td class="left">
+
+            <ion-fab-button href="../inicial/" size="small" >
+              <ion-icon color="success" name="arrow-back" class="mais"></ion-icon>
+            </ion-fab-button>
+
+
+
+        </td>
+        <td class="right"><img src="..\assets\room.png" width="60" alt="logo"></td>
+      </tr>
+    </table>
+
+
+    <ion-menu contentId="main-content" class="menu">
+
+      <div class="botaoMenu">
+        <div class="tituloPrincipal">
+          <strong>MENU</strong>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../inicial/">
+            Tela Inicial
+            <ion-icon name="home-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../despesas/">
+            Despesas
+            <ion-icon name="file-tray-full-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../agenda/">
+            Agenda
+            <ion-icon name="calendar-number-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../enquetes/">
+            Enquetes
+            <ion-icon name="help-circle-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../regras/">
+            Regras da casa
+            <ion-icon name="alert-circle-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../moradores/">
+            Moradores
+            <ion-icon name="people-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../visitantes/">
+            Visitantes
+            <ion-icon name="person-add-sharp"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="botaoMenu">
+          <ion-button fill="clear" href="../configuracoes/">
+            Configurações
+            <ion-icon name="settings-sharp"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+
+
+    </ion-menu>
+    <div id="main-content">
+
+      <ion-toolbar color="success">
+        <ion-buttons slot="start">
+          <ion-menu-button color="dark"></ion-menu-button>
+        </ion-buttons>
+        <ion-label color="dark"><strong>MORADORES</strong></ion-label>
+
+      </ion-toolbar>
+
+      <ion-list lines="inset">
+        <ion-item color="medium">
+          <ion-label>
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label><br><strong>Rafael de Medeiros</strong></ion-label>
+            <ion-label>32 anos</ion-label>
+            <ion-label>Estudante de Computação</ion-label>
+          </ion-label>
+        </ion-item>
+
+        <ion-item color="medium">
+          <ion-label>
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label><br><strong>Amanda Neves</strong></ion-label>
+            <ion-label>35 anos</ion-label>
+            <ion-label>Estudante de Administração</ion-label>
+          </ion-label>
+        </ion-item>
+
+        <ion-item color="medium">
+          <ion-label>
+            <ion-avatar slot="start">
+              <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label><br><strong>Paulo Victor</strong></ion-label>
+            <ion-label>32 anos</ion-label>
+            <ion-label>Estudante de Medicina</ion-label>
+          </ion-label>
+        </ion-item>
+
+        <ion-item  color="medium">
+          <ion-label>
+          <ion-fab>
+            <ion-fab-button color="success" id="open-modal" expand="block">
+              <ion-icon name="add" class="mais"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+        </ion-label>
+        </ion-item>
+
+        <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)" >
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button (click)="cancel()">Cancel</ion-button>
+                </ion-buttons>
+                <ion-title>Welcome</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding"  color="medium">
+              <ion-item>
+                <ion-label class="informativo">
+                  Envie o código da casa para o novo morador
+                </ion-label>
+              </ion-item>
+              <ion-item color="dark">
+                <ion-label class="codigoCasa">#RM467612</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label class="informativo">
+                  Clique no código para copiar
+                </ion-label>
+              </ion-item>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+
+      </ion-list>
+
+
+    </div>
+
+
+</div>
+</ion-content>
