@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { OverlayEventDetail } from '@ionic/core/components';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
@@ -18,8 +19,9 @@ export class RegrasPage implements OnInit {
   regras: any;
   createRegra!: FormGroup
   houseId: string | null = sessionStorage.getItem('house')
+  userId = this.authService.decodePayloadJWT()
 
-  constructor(private regraService: RegrasService, private houseService: HouseService, private fb: FormBuilder) { }
+  constructor(private authService: AuthService, private regraService: RegrasService, private houseService: HouseService, private fb: FormBuilder) { }
 
   ngOnInit() {
     this.createRegra = this.fb.group({
@@ -27,7 +29,6 @@ export class RegrasPage implements OnInit {
       accepted: [false]
     })
     this.loadRegra();
-    // this.houseService.getHouseId().subscribe((res) => console.log(res))
   }
   cancel() {
     this.modal.dismiss(null, 'cancel');
@@ -39,9 +40,14 @@ export class RegrasPage implements OnInit {
     })
   }
 
-  confirm() {
-    console.log(this.createRegra.value)
+  isAceppted(rule: any) {
+    const accepted = rule.UserRules.map((item: any) => item.fk_id_user === this.userId)
 
+    return accepted[0]
+
+  }
+
+  confirm() {
     this.regraService.createRule(this.createRegra.value, this.houseId).subscribe({
       next: () => {
         this.modal.dismiss(this.name, 'confirm')
@@ -49,7 +55,13 @@ export class RegrasPage implements OnInit {
       },
       error: (err) => console.log(err)
     })
+  }
 
+  acceptRule(ruleId: string) {
+    this.regraService.acceptRule(ruleId, this.userId).subscribe({
+      next: () => this.loadRegra(),
+      error: (err) => console.log(err)
+    })
 
   }
 

@@ -17,4 +17,8 @@ export class RegrasService {
   createRule(rule: any, houseId: any) {
     return this.http.post(`${BASE_URL}/${houseId}/rule`, rule);
   }
+
+  acceptRule(ruleId: string, userId: any) {
+    return this.http.put(`${BASE_URL}/rule/accept/${ruleId}`, { userId: userId });
+  }
 }
