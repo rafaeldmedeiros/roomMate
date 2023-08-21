@@ -4,54 +4,57 @@
     <table>
       <tr>
         <td class="left">
-          <ion-button fill="clear" size="large"  href="../inicial/">
+          <ion-button fill="clear" size="large" href="../inicial/">
             <ion-icon name="arrow-back-circle" color="primary"></ion-icon>
           </ion-button>
-      </td>
+        </td>
         <td class="right"><img src="..\assets\room.png" width="60" alt="logo"></td>
       </tr>
     </table>
     <div class="tituloPrincipal"><strong>CADASTRO</strong> </div>
 
     <ion-grid>
-      <ion-row class="form">
-        <ion-item lines="none">
-          <ion-label position="floating">Nome Completo</ion-label>
-          <ion-input type="simples"></ion-input>
-        </ion-item>
-      </ion-row>
-      <ion-row class="form">
-        <ion-item lines="none">
-          <ion-label position="floating">E-mail</ion-label>
-          <ion-input type="email"></ion-input>
-        </ion-item>
-      </ion-row>
-      <ion-row class="form">
-        <ion-item lines="none">
-          <ion-label position="floating">Telefone</ion-label>
-          <ion-input type="Telefone"></ion-input>
-        </ion-item>
-      </ion-row>
-      <ion-row class="form">
-        <ion-item lines="none">
-          <ion-label position="floating">Sexo</ion-label>
-          <ion-input type="simples"></ion-input>
-        </ion-item>
-      </ion-row>
-      <ion-row class="form">
-        <ion-item lines="none">
-          <ion-label position="floating">Senha</ion-label>
-          <ion-input type="password"></ion-input>
-        </ion-item>
-      </ion-row>
-      <ion-row class="form">
-        <ion-item lines="none">
-          <ion-label position="floating">Repetir senha</ion-label>
-          <ion-input type="password"></ion-input>
-        </ion-item>
-      </ion-row>
+      <form [formGroup]="createUserForm">
+        <ion-row class="form">
+          <ion-item lines="none">
+            <ion-label position="floating">Nome Completo</ion-label>
+            <ion-input type="simples" formControlName="name"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row class="form">
+          <ion-item lines="none">
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row class="form">
+          <ion-item lines="none">
+            <ion-label position="floating">Telefone</ion-label>
+            <ion-input type="Telefone" formControlName="phone"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row class="form">
+          <ion-item lines="none">
+            <ion-label position="floating">Sexo</ion-label>
+            <ion-input type="simples" formControlName="gender"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row class="form">
+          <ion-item lines="none">
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row class="form">
+          <ion-item lines="none">
+            <ion-label position="floating">Repetir senha</ion-label>
+            <ion-input type="password" formControlName="confirmPassword"></ion-input>
+          </ion-item>
+        </ion-row>
+      </form>
     </ion-grid>
 
-    <ion-button shape="round" expand="full" class="botaoPrincipal" color="success">Entrar</ion-button>
+    <ion-button shape="round" expand="full" class="botaoPrincipal" color="success"
+      (click)="createUser()">Cadastrar</ion-button>
   </div>
 </ion-content>

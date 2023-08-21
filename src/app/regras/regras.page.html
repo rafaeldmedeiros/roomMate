@@ -5,9 +5,9 @@
       <tr>
         <td class="left">
 
-            <ion-fab-button href="../inicial/" size="small" >
-              <ion-icon color="success" name="arrow-back" class="mais"></ion-icon>
-            </ion-fab-button>
+          <ion-fab-button href="../inicial/" size="small">
+            <ion-icon color="success" name="arrow-back" class="mais"></ion-icon>
+          </ion-fab-button>
 
 
 
@@ -86,38 +86,16 @@
 
       </ion-toolbar>
 
-      <ion-card>
+      <ion-card *ngFor="let regra of regras; let i = index">
         <ion-card-header>
           <ion-card-subtitle>
-            <h4>Regra 1: </h4><br>
-            Here's a small text description for the card content. Nothing more, nothing less.</ion-card-subtitle>
+            <h4>Regra {{i + 1}}: </h4><br>
+            {{regra.description}}
+          </ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
-              <ion-button shape="round" expand="full" class="botaoPrincipal" color="success">Li e concordo</ion-button>
+          <ion-button shape="round" expand="full" class="botaoPrincipal" color="success">Li e concordo</ion-button>
         </ion-card-content>
-      </ion-card>
-
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>
-            <h4>Regra 2: </h4><br>
-            Here's a small text description for the card content. Nothing more, nothing less.</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-              <ion-button shape="round" expand="full" class="botaoPrincipal" color="success">Li e concordo</ion-button>
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>
-            <h4>Regra 2: </h4><br>
-            Here's a small text description for the card content. Nothing more, nothing less.</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-              <ion-button shape="round" expand="full" class="botaoPrincipal" color="success">Li e concordo</ion-button>
-        </ion-card-content>
-
       </ion-card>
 
       <ion-fab>
@@ -127,28 +105,31 @@
       </ion-fab>
 
       <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
-        <ng-template>
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-button (click)="cancel()">Cancel</ion-button>
-              </ion-buttons>
-              <ion-title>Welcome</ion-title>
-              <ion-buttons slot="end">
-                <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-              </ion-buttons>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
-            <ion-item>
+        <form [formGroup]="createRegra">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button (click)="cancel()">Cancel</ion-button>
+                </ion-buttons>
+                <ion-title>Welcome</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <ion-item>
 
-            </ion-item>
-            <ion-textarea label="Outline textarea" labelPlacement="floating" fill="outline" placeholder="Informe aqui a nova regra"></ion-textarea>
+              </ion-item>
+              <ion-textarea formControlName="description" label="Outline textarea" labelPlacement="floating"
+                fill="outline" placeholder="Informe aqui a nova regra"></ion-textarea>
 
-          </ion-content>
-        </ng-template>
+            </ion-content>
+          </ng-template>
+        </form>
       </ion-modal>
 
     </div>
-</div>
+  </div>
 </ion-content>
