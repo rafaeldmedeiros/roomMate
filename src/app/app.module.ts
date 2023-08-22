@@ -8,9 +8,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
+import { MenuModule } from './menu/menu.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, {
     provide: HTTP_INTERCEPTORS,

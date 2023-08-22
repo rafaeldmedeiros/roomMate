@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MenuComponent } from './menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { DespesasPageRoutingModule } from './despesas-routing.module';
-
-import { DespesasPage } from './despesas.page';
-import { MenuModule } from '../menu/menu.module';
+import { DespesasPageRoutingModule } from '../despesas/despesas-routing.module';
 
 @NgModule({
   imports: [
@@ -15,9 +11,9 @@ import { MenuModule } from '../menu/menu.module';
     FormsModule,
     IonicModule,
     DespesasPageRoutingModule,
-    ReactiveFormsModule,
-    MenuModule
+    ReactiveFormsModule
   ],
-  declarations: [DespesasPage]
+  declarations: [MenuComponent],
+  exports: [MenuComponent]
 })
-export class DespesasPageModule { }
+export class MenuModule { }

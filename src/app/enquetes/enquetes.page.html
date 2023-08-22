@@ -5,9 +5,9 @@
       <tr>
         <td class="left">
 
-            <ion-fab-button href="../inicial/" size="small" >
-              <ion-icon color="success" name="arrow-back" class="mais"></ion-icon>
-            </ion-fab-button>
+          <ion-fab-button href="../inicial/" size="small">
+            <ion-icon color="success" name="arrow-back" class="mais"></ion-icon>
+          </ion-fab-button>
 
 
 
@@ -17,65 +17,7 @@
     </table>
 
 
-    <ion-menu contentId="main-content" class="menu">
-
-      <div class="botaoMenu">
-        <div class="tituloPrincipal">
-          <strong>MENU</strong>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../inicial/">
-            Tela Inicial
-            <ion-icon name="home-sharp"></ion-icon>
-          </ion-button>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../despesas/">
-            Despesas
-            <ion-icon name="file-tray-full-sharp"></ion-icon>
-          </ion-button>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../agenda/">
-            Agenda
-            <ion-icon name="calendar-number-sharp"></ion-icon>
-          </ion-button>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../enquetes/">
-            Enquetes
-            <ion-icon name="help-circle-sharp"></ion-icon>
-          </ion-button>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../regras/">
-            Regras da casa
-            <ion-icon name="alert-circle-sharp"></ion-icon>
-          </ion-button>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../moradores/">
-            Moradores
-            <ion-icon name="people-sharp"></ion-icon>
-          </ion-button>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../visitantes/">
-            Visitantes
-            <ion-icon name="person-add-sharp"></ion-icon>
-          </ion-button>
-        </div>
-        <div class="botaoMenu">
-          <ion-button fill="clear" href="../configuracoes/">
-            Configurações
-            <ion-icon name="settings-sharp"></ion-icon>
-          </ion-button>
-        </div>
-      </div>
-
-
-
-    </ion-menu>
+    <app-menu></app-menu>
     <div id="main-content">
 
       <ion-toolbar color="success">
@@ -90,7 +32,8 @@
 
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle>Questão 1: Here's a small text description for the card content. Nothing more, nothing less.</ion-card-subtitle>
+        <ion-card-subtitle>Questão 1: Here's a small text description for the card content. Nothing more, nothing
+          less.</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
@@ -108,7 +51,8 @@
 
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle>Questão 2: Here's a small text description for the card content. Nothing more, nothing less.</ion-card-subtitle>
+        <ion-card-subtitle>Questão 2: Here's a small text description for the card content. Nothing more, nothing
+          less.</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
@@ -124,50 +68,51 @@
       </ion-card-content>
     </ion-card>
 
-      <ion-fab>
-        <ion-fab-button color="success" id="open-modal" expand="block">
-          <ion-icon name="add" class="mais"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
+    <ion-fab>
+      <ion-fab-button color="success" id="open-modal" expand="block">
+        <ion-icon name="add" class="mais"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 
-      <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
-        <ng-template>
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-button (click)="cancel()">Cancel</ion-button>
-              </ion-buttons>
-              <ion-title>Welcome</ion-title>
-              <ion-buttons slot="end">
-                <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-              </ion-buttons>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
-            <ion-item>
+    <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+            <ion-title>Welcome</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-item>
 
-            </ion-item>
-            <ion-textarea label="Outline textarea" labelPlacement="floating" fill="outline" placeholder="Informe aqui a questão da enquete"></ion-textarea>
-            <ion-item>
-              <ion-label position="stacked">Opção 1:</ion-label>
-              <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Opção 2:</ion-label>
-              <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">Opção 3:</ion-label>
-              <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label position="stacked">VENCIMENTO:</ion-label>
-              <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
-            </ion-item>
-          </ion-content>
-        </ng-template>
-      </ion-modal>
+          </ion-item>
+          <ion-textarea label="Outline textarea" labelPlacement="floating" fill="outline"
+            placeholder="Informe aqui a questão da enquete"></ion-textarea>
+          <ion-item>
+            <ion-label position="stacked">Opção 1:</ion-label>
+            <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Opção 2:</ion-label>
+            <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Opção 3:</ion-label>
+            <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">VENCIMENTO:</ion-label>
+            <ion-input type="text" placeholder="Valor" [(ngModel)]="name"></ion-input>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
 
 
-</div>
+  </div>
 </ion-content>

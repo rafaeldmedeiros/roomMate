@@ -26,10 +26,6 @@ export class InicialPage implements OnInit {
         sessionStorage.setItem('house', res.house_id)
       }
     })
-
-    this.houseService.getHouseId().subscribe((res) => console.log(res))
-
-
   }
 
 }

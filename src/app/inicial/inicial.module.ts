@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InicialPageRoutingModule } from './inicial-routing.module';
 
 import { InicialPage } from './inicial.page';
+import { MenuModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { InicialPage } from './inicial.page';
     FormsModule,
     IonicModule,
     InicialPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MenuModule
   ],
   declarations: [InicialPage]
 })

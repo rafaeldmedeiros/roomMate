@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { EnquetesPageRoutingModule } from './enquetes-routing.module';
 
 import { EnquetesPage } from './enquetes.page';
+import { MenuModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EnquetesPageRoutingModule
+    EnquetesPageRoutingModule,
+    MenuModule
   ],
   declarations: [EnquetesPage]
 })
-export class EnquetesPageModule {}
+export class EnquetesPageModule { }

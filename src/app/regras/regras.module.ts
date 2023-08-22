@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RegrasPageRoutingModule } from './regras-routing.module';
 
 import { RegrasPage } from './regras.page';
+import { MenuModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { RegrasPage } from './regras.page';
     FormsModule,
     IonicModule,
     RegrasPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MenuModule
   ],
   declarations: [RegrasPage]
 })

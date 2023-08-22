@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { MoradoresPageRoutingModule } from './moradores-routing.module';
 
 import { MoradoresPage } from './moradores.page';
+import { MenuModule } from '../menu/menu.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MoradoresPageRoutingModule
+    MoradoresPageRoutingModule,
+    MenuModule
   ],
   declarations: [MoradoresPage]
 })
-export class MoradoresPageModule {}
+export class MoradoresPageModule { }

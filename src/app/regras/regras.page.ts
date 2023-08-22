@@ -21,6 +21,8 @@ export class RegrasPage implements OnInit {
   houseId: string | null = sessionStorage.getItem('house')
   userId = this.authService.decodePayloadJWT()
 
+  isAdmin = sessionStorage.getItem('PERMISSION')
+
   constructor(private authService: AuthService, private regraService: RegrasService, private houseService: HouseService, private fb: FormBuilder) { }
 
   ngOnInit() {
